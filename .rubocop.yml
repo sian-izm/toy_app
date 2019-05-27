@@ -1,0 +1,30 @@
+require: rubocop-performance
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - "vendor/bundle/**/*"
+    - "node_modules/**/*"
+    - ".git/**/*"
+    - "bin/*"
+    - "db/schema.rb"
+    - "db/migrate/*.rb"
+    - "db/seeds.rb"
+    - "db/seeds/*.rb"
+    - "log/**/*"
+    - "public/**/*"
+    - "tmp/**/*"
+    - "config/initializers/*"
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - "app/views/**/*"
+    - "config/**/*.rb"
+    - "spec/factories/**/*.rb"
+    - "Guardfile"
+
+Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
